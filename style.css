@@ -68,11 +68,13 @@ body {
     font-weight: 700;
 }
 
-.regular-20,
 pre {
+    font-family: Inter, sans-serif;
+}
+
+.regular-20 {
     font-size: 20px;
     font-weight: 400;
-    font-family: Inter, sans-serif;
 }
 
 .regular-18 {
@@ -151,6 +153,26 @@ nav img {
 .menu-duck5 { filter: var(--Duck5); }
 .menu-duck6 { filter: var(--Duck6); }
 .menu-duck7 { filter: var(--Duck7); }
+
+nav li {
+    position: relative;
+}
+
+nav li::before {
+    content: "";
+    border-bottom: 2px solid darkblue;
+    position: absolute;
+    bottom: 0;
+    left: 21px;
+    width: calc(100% - 20px);
+    overflow: hidden;
+    transform: scale(0,0);
+    transition: transform 200ms;
+}
+
+nav li:hover::before {
+    transform: scale(1,1);
+}
 /*#endregion*/
 
 
@@ -173,10 +195,23 @@ main div:first-child {
 
 .intro2 {
     margin-top: 26px;
+    width: 400px;
+    height: 62px;
+
+    overflow: hidden;
+}
+
+.intro2 span {
+    display: block;
+    transition: transform cubic-bezier(0.35,-0.47, 0.68, 1.58) 350ms;
+}
+
+#intro:hover span {
+    transform: translateY(-100%);
 }
 
 .intro3 {
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: 2px;
 }
 
@@ -272,7 +307,33 @@ main div:last-child {
 .skills img {
     filter: var(--Duck7);
     width: 110px;
+    transition: transform 250ms, filter 20ms;
 }
+
+.skills img:hover {
+    transform:
+        rotateZ(5deg)
+        scale(1.2);
+}
+
+.skills .skills-container:nth-child(1) img:hover,
+.skills .skills-container:nth-child(2) img:hover,
+.skills .skills-container:nth-child(3) img:hover,
+.skills .skills-container:nth-child(4) img:hover,
+.skills .skills-container:nth-child(5) img:hover,
+.skills .skills-container:nth-child(6) img:hover {filter: var(--Duck2);}
+.skills .skills-container:nth-child(7) img:hover,
+.skills .skills-container:nth-child(8) img:hover,
+.skills .skills-container:nth-child(9) img:hover,
+.skills .skills-container:nth-child(10) img:hover,
+.skills .skills-container:nth-child(11) img:hover,
+.skills .skills-container:nth-child(12) img:hover {filter: var(--Duck4);}
+.skills .skills-container:nth-child(13) img:hover,
+.skills .skills-container:nth-child(14) img:hover,
+.skills .skills-container:nth-child(15) img:hover,
+.skills .skills-container:nth-child(16) img:hover,
+.skills .skills-container:nth-child(17) img:hover,
+.skills .skills-container:nth-child(18) img:hover {filter: var(--Duck5);}
 /*#endregion*/
 
 
@@ -295,6 +356,7 @@ main div:last-child {
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    padding-left: 10px;
 }
 
 .portfolio-2 { /* NOT UNIVERSAL */
@@ -319,7 +381,19 @@ main div:last-child {
     margin-right: 30px;
     border-radius: 20px;
     position: relative;
+    transition: 250ms;
 }
+
+/*ANIMATION*/
+.portfolio-single:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-single:hover .portfolio-image {
+    transform: scale(1.06) translateY(-5%);
+    /*original state down below under image*/
+}
+/*END ANIMATION*/
 
 .port1 {
     margin-top: 25px;
@@ -379,6 +453,7 @@ main div:last-child {
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.25);
     background-size: cover;
     background-position: -8px 0;
+    transition: 250ms;
 }
 
 .pimg1 { background-image: url(images/portfolio-resume.jpg);}
@@ -549,6 +624,7 @@ main div:last-child {
 
 .offer .text-position {
     position: relative;
+    margin-left: 8%;
 }
 
 .offer .text-position span {
