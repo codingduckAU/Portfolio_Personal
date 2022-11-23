@@ -39,7 +39,7 @@
                 &nbsp; background, while gaining experience as a freelancer.<br>
                 &nbsp; Open to full-time work oppurtunities, or freelance projects.</p>
         </div>
-        <div>
+        <div class="intro2ndarea">
             <img class="intro-behind" src="images/personal_pic_paint.png" alt="background behind personal picture">
             <img class="intro-top" src="images/personal_pic_CLEAR.png" alt="Personal Profile picture">
         </div>
@@ -52,13 +52,13 @@
         <div>
             <p class="title-40 right">Who is Daniel?</p>
             <p class="regular-14">Ever since I was young, I was creating websites.<br>
-                Back in 1999 on GeoCities.com I lauched my first, it was all the craze if you knew how to code in<br>
-                only HTML. Not many web building tools were available back then, and words like CSS &<br>
+                Back in 1999 on GeoCities.com I lauched my first at the age of 15, it was all the craze if you knew how to code in
+                only HTML. Not many web building tools were available back then, and words like CSS &
                 JavaScript were rarely spoken.</p>
             <p class="regular-14">Upon leaving school I studied 3D Animation to explore how creative I could be.<br>
-                But being a youngster I wanted to explore my entreprenual side and went onto launching start-ups<br>
-                and building businesses. While creating wordpress websites for my companies and others.</p>
-            <p class="regular-14">Now it is time to fulfil my lifetime passion of making websites from scratch, and mixing it with 2D &<br>
+                But being a youngster I wanted to explore my entreprenual side and went onto launching start-ups
+                and building businesses. While creating wordpress websites for my companies and others on the side.</p>
+            <p class="regular-14">Now it is time to fulfil my lifetime passion of making websites from scratch, and mixing it with 2D &
                 3D animation to become a creative front-end developer.</p>
             <p class="regular-14">And yes, I have a duck fascination... #codingDuckAU</p>
         </div>
@@ -66,7 +66,8 @@
 
     <section class="skills" id="skills">                 <!------------ SKILLS -------------->
         <p class="title-40">Skills</p>
-        <div class="skills-flex">
+        <div class="skills-wrapper">
+
             <div class="skills-container">
                 <div class="skills-icon"><img src="images/skills_html.png" alt="HTML icon"></div>
                 <div class="regular-14">HTML5</div>
@@ -136,15 +137,30 @@
                 <div class="regular-14">Wordpress</div>
             </div>
             <div class="skills-container">
+                <div class="skills-icon"><img src="images/skills_shopify.png" alt="Shopify icon"></div>
+                <div class="regular-14">Shopify</div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-icon"><img src="images/skills_magento.png" alt="Magento icon"></div>
+                <div class="regular-14">Magento</div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-icon"><img src="images/skills_wix.png" alt="Wix icon"></div>
+                <div class="regular-14">Wix</div>
+            </div>
+            <div class="skills-container">
                 <div class="skills-icon"><img src="images/skills_dns.png" alt="Domain Name Server icon"></div>
                 <div class="regular-14">DNS / Hosting</div>
             </div>
+
         </div>
     </section>
 
     <section class="portfolio" id="portfolio">           <!------------ PORTFOLIO -------------->
         <p class="title-40">Portfolio</p>
-        <div class="portfolio-3">
+
+        <div class="portfolio-wrapper">
+            
             <article class="portfolio-single">
                 <p class="bold-20 port1">Personal Website</p>
                 <p class="bold-20 grey port2">codingduck.au</p>
@@ -189,10 +205,10 @@
                 <p><a class="code-box" href="https://github.com/codingduckAU/Scrimba-Invoice_Creator" target="_blank">Code</a></p>
                 <div class="portfolio-image pimg3"></div>
             </article>
-        </div>
 
 
-        <div class="portfolio-2">
+
+
             <article class="portfolio-single">
                 <p class="bold-20 port1">Company Website</p>
                 <p class="bold-20 grey port2">Prime Renovations</p>
@@ -221,10 +237,9 @@
                 <p class="nocode">&nbsp;Code&nbsp;</p>
                 <div class="portfolio-image pimg5"></div>
             </article>
-        </div>
 
 
-        <div class="portfolio-3">
+
             <article class="portfolio-single">
                 <p class="bold-20 port1">Company Website</p>
                 <p class="bold-20 grey port2">Trio Ceramica</p>
@@ -242,7 +257,7 @@
 
             <article class="portfolio-single">
                 <p class="bold-20 port1">Company Website</p>
-                <p class="bold-20 grey port2">ADR Dental (verson 2)</p>
+                <p class="bold-20 grey port2">ADR Dental (version 2)</p>
                 <ul class="regular-14 port3">
                     <li>Wordpress - Multi Page</li>
                     <li>New content/theme from previous version</li>
@@ -257,7 +272,7 @@
 
             <article class="portfolio-single">
                 <p class="bold-20 port1">Company Website</p>
-                <p class="bold-20 grey port2">ADR Dental (verson 1)</p>
+                <p class="bold-20 grey port2">ADR Dental (version 1)</p>
                 <ul class="regular-14 port3">
                     <li>Wordpress - Multi Page</li>
                     <li>Very first commercial project</li>
@@ -269,10 +284,11 @@
                 <p class="nocode">&nbsp;Code&nbsp;</p>
                 <div class="portfolio-image pimg8"></div>
             </article>
+
         </div>
 
-        <div class="wp1"></div><div class="wp2"></div><div class="wp3"></div><div class="wp4"></div>
-        <img class="wp-image" src="images/skills_wordpress.png">
+        <!-- <div class="wp1"></div><div class="wp2"></div><div class="wp3"></div><div class="wp4"></div>
+        <img class="wp-image" src="images/skills_wordpress.png"> -->
     </section>
     
     <section class="education" id="education">           <!------------ EDUCATION -------------->
@@ -333,37 +349,44 @@
     </section>
 
     <section class="contact-me" id="contact">            <!------------ CONTACT ME --------------> 
-        <div class="cm1">
-            <p class="title-40">Contact me</p>
-            <p class="regular-18 cp1">Feel free to drop me a line regarding any type of<br>
-                work oppurtunities. Work history available on LinkedIn.</p>
-            <p class="regular-18 cp2">Always happy to chat about start-up ideas or<br>
-                collaborations</p>
-            <form class="form-all" action="https://formsubmit.co/9f8a3e0e7e40e1df57b6be6423bdb543" method="POST">
-                <input class="form1 regular-18" placeholder="Name *" required type="text" id="form-name" name="name"><br>
-                <input class="form2 regular-18" placeholder="E-mail *" required type="email" id="form-email" name="email"><br>
-                <textarea class="form3 regular-18" placeholder="Message *" required type="text" id="form-text" name="message"></textarea><br>
-                <button class="form-button regular-18" type="submit">Send</button> &nbsp; <img src="images/icon_recapture.png" class="recapture">
-            </form>
+        <p class="title-40">Contact me</p>
+
+        <div class="contact-wrapper">
+
+            <div class="cm1">
+                <p class="regular-18 cp1">Feel free to drop me a line regarding any type of<br>
+                    work oppurtunities. Work history available on LinkedIn.</p>
+                <p class="regular-18 cp2">Always happy to chat about start-up ideas or<br>
+                    collaborations</p>
+                <form class="form-all" action="https://formsubmit.co/9f8a3e0e7e40e1df57b6be6423bdb543" method="POST">
+                    <input class="form1 regular-18" placeholder="Name *" required type="text" id="form-name" name="name"><br>
+                    <input class="form2 regular-18" placeholder="E-mail *" required type="email" id="form-email" name="email"><br>
+                    <textarea class="form3 regular-18" placeholder="Message *" required type="text" id="form-text" name="message"></textarea><br>
+                    <button class="form-button regular-18" type="submit">Send</button> &nbsp; <img src="images/icon_recapture.png" class="recapture">
+                </form>
+            </div>
+
+            <div class="cm2">
+                <div class="cm-flex cm-top">
+                    <div><img src="images/footer-email.png" alt="Email icon" id="emaillink" class="cursor" title="Click to send email"></div>
+                    <div class="regular-18 flex cursor" id="emaillink" title="Click to send email"><div class="ooLi">l@coding</div><div class="h4geu">danie</div><div class="qRT44">duck.au</div></div>
+                </div>
+                <div class="cm-flex cm-others">
+                    <div><a href="https://www.linkedin.com/in/daniel-pizzuti/" target="_blank"><img src="images/footer-linkedin.png" alt="Linkedin icon"></a></div>
+                    <div class="regular-18"><a href="https://www.linkedin.com/in/daniel-pizzuti/" target="_blank">https://www.linkedin.com/in/daniel-pizzuti/</a></div>
+                </div>
+                <div class="cm-flex cm-others">
+                    <div><a href="https://github.com/codingduckAU" target="_blank"><img src="images/footer-github.png" alt="Github icon"></a></div>
+                    <div class="regular-18"><a href="https://github.com/codingduckAU" target="_blank">https://github.com/codingduckAU</a></div>
+                </div>
+                <div class="cm-flex cm-others">
+                    <div><img src="images/footer-phone.png" alt="Mobile Phone icon" id="moblink" class="cursor" title="Click to make phone call"></div>
+                    <div class="regular-18 flex cursor" id="moblink" title="Click to make phone call"><div class="qRT44">317</div><div class="h4geu">+61 448&nbsp;</div><div class="ooLi">190&nbsp;</div></div>
+                </div>
+            </div>
+
         </div>
-        <div class="cm2">
-            <div class="cm-flex cm-top">
-                <div><img src="images/footer-email.png" alt="Email icon" id="emaillink" class="cursor" title="Click to send email"></div>
-                <div class="regular-18 flex cursor" id="emaillink" title="Click to send email"><div class="ooLi">l@coding</div><div class="h4geu">danie</div><div class="qRT44">duck.au</div></div>
-            </div>
-            <div class="cm-flex cm-others">
-                <div><a href="https://www.linkedin.com/in/daniel-pizzuti/" target="_blank"><img src="images/footer-linkedin.png" alt="Linkedin icon"></a></div>
-                <div class="regular-18"><a href="https://www.linkedin.com/in/daniel-pizzuti/" target="_blank">https://www.linkedin.com/in/daniel-pizzuti/</a></div>
-            </div>
-            <div class="cm-flex cm-others">
-                <div><a href="https://github.com/codingduckAU" target="_blank"><img src="images/footer-github.png" alt="Github icon"></a></div>
-                <div class="regular-18"><a href="https://github.com/codingduckAU" target="_blank">https://github.com/codingduckAU</a></div>
-            </div>
-            <div class="cm-flex cm-others">
-                <div><img src="images/footer-phone.png" alt="Mobile Phone icon" id="moblink" class="cursor" title="Click to make phone call"></div>
-                <div class="regular-18 flex cursor" id="moblink" title="Click to make phone call"><div class="qRT44">317</div><div class="h4geu">+61 448&nbsp;</div><div class="ooLi">190&nbsp;</div></div>
-            </div>
-        </div>
+        
     </section>
 
 </div>

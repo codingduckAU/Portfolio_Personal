@@ -181,7 +181,7 @@ nav li:hover::before {
 main {
     margin-top: 105px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 main div:first-child {
@@ -195,7 +195,7 @@ main div:first-child {
 
 .intro2 {
     margin-top: 26px;
-    width: 400px;
+    max-width: 400px;
     height: 62px;
 
     overflow: hidden;
@@ -217,6 +217,7 @@ main div:first-child {
 
 .intro4 {
     margin-top: 92px;
+    display: none;
 }
 
 /* INTRO-IMAGES */
@@ -263,6 +264,7 @@ main div:last-child {
 
 .about div:last-child{
     margin-right: 130px;
+    padding-left: 50px;
 }
 
 .about p {
@@ -271,11 +273,6 @@ main div:last-child {
 
 .about p:nth-child(2) {
     margin-top: 50px;
-}
-
-
-.about div:last-child {
-    padding-left: 50px;
 }
 /*#endregion*/
 
@@ -288,20 +285,22 @@ main div:last-child {
     margin-right: 9%;
 }
 
-.skills-flex {
+.skills-wrapper {
     margin-top: 55px;
     margin-left: 1.7%;
     margin-right: 1.8%;
-    height: 490px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: space-between;
     flex-wrap: wrap;
     gap: 4%;
 
     text-align: center;
     color: var(--fontBlack);
+}
+
+.skills-container {
+    margin-bottom: 50px;
 }
 
 .skills img {
@@ -322,18 +321,24 @@ main div:last-child {
 .skills .skills-container:nth-child(4) img:hover,
 .skills .skills-container:nth-child(5) img:hover,
 .skills .skills-container:nth-child(6) img:hover {filter: var(--Duck2);}
+
 .skills .skills-container:nth-child(7) img:hover,
 .skills .skills-container:nth-child(8) img:hover,
 .skills .skills-container:nth-child(9) img:hover,
 .skills .skills-container:nth-child(10) img:hover,
 .skills .skills-container:nth-child(11) img:hover,
 .skills .skills-container:nth-child(12) img:hover {filter: var(--Duck4);}
+
 .skills .skills-container:nth-child(13) img:hover,
 .skills .skills-container:nth-child(14) img:hover,
 .skills .skills-container:nth-child(15) img:hover,
 .skills .skills-container:nth-child(16) img:hover,
 .skills .skills-container:nth-child(17) img:hover,
 .skills .skills-container:nth-child(18) img:hover {filter: var(--Duck5);}
+
+.skills .skills-container:nth-child(19) img:hover,
+.skills .skills-container:nth-child(20) img:hover,
+.skills .skills-container:nth-child(21) img:hover {filter: var(--Duck1);}
 /*#endregion*/
 
 
@@ -350,50 +355,23 @@ main div:last-child {
     margin-bottom: 55px;
 }
 
-/*BOX SIZING*/
-
-.portfolio-3 { /* NOT UNIVERSAL */
+.portfolio-wrapper {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    padding-left: 10px;
-}
-
-.portfolio-2 { /* NOT UNIVERSAL */
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 100px;
-}
-
-.portfolio-2 .portfolio-single:first-child {
-    margin-left: 10%;
-}
-.portfolio-2 .portfolio-single:last-child {
-    margin-right: 10%;
+    justify-content: space-around; /*best one*/
+    flex-wrap: wrap;
 }
 
 /*INSIDE STYLING*/
-
 .portfolio-single {
     background-color: #FFFFFF;
     width: 348px;
     height: 450px;
     margin-right: 30px;
+    margin-bottom: 80px;
     border-radius: 20px;
     position: relative;
     transition: 250ms;
 }
-
-/*ANIMATION*/
-.portfolio-single:hover {
-    transform: scale(1.03);
-}
-
-.portfolio-single:hover .portfolio-image {
-    transform: scale(1.06) translateY(-5%);
-    /*original state down below under image*/
-}
-/*END ANIMATION*/
 
 .port1 {
     margin-top: 25px;
@@ -410,7 +388,6 @@ main div:last-child {
 }
 
 /*DEMO-CODE*/
-
 .demo-box,
 .code-box,
 .nocode {
@@ -442,7 +419,6 @@ main div:last-child {
 
 
 /*IMAGE*/
-
 .portfolio-image {
     width: 258px;
     height: 280px;
@@ -465,17 +441,26 @@ main div:last-child {
 .pimg7 { background-image: url(images/portfolio-adr2.jpg);}
 .pimg8 { background-image: url(images/portfolio-adr1.jpg);}
 
-.portfolio .pimg2 { /*FIX IMAGE POSITION */
+.portfolio .pimg2 {
     background-position: -14px 0;
 }
 
-.portfolio .pimg3 { /*FIX IMAGE POSITION */
+.portfolio .pimg3 {
     background-position: 1px 0;
+}
+
+/*ANIMATION*/
+.portfolio-single:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-single:hover .portfolio-image {
+    transform: scale(1.06) translateY(-5%);
+    /*original state down below under image*/
 }
 
 /*WORDPRESS LINES*/
 /*snaps to 'Portfolio' section*/
-
 .wp1 {
     position: absolute;
     background-color: var(--grey);
@@ -524,7 +509,7 @@ main div:last-child {
 /*--------------- EDUCATION --------------*/
 /*#region*/
 .education {
-    margin-top: 315px;
+    margin-top: 260px;
 }
 
 .education .title-40 {
@@ -662,6 +647,13 @@ main div:last-child {
 /*#region*/
 .contact-me {
     margin-top: 285px;
+}
+
+.contact-me .title-40 {
+    margin-left: 9%; /*115px*/
+}
+
+.contact-wrapper {
     display: flex;
     justify-content: space-evenly;
 }
@@ -810,4 +802,181 @@ footer img {
     width: 60px;
     margin-left: 20px;
 }
+/*#endregion*/
+
+
+
+
+
+
+/*--------------- MEDIA QUERIES --------------*/
+/*#region*/
+
+@media (max-width: 1130px) {
+    /* body {
+        background-color: darkgrey;
+    }  */
+    .skills-wrapper {
+        gap: 5%; /*ORIG 4%*/
+    }
+    .skills .skills-container:nth-child(21) {
+        margin: 0 auto;
+    }
+    .fr2 {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 1000px) { 
+    /* body {
+        background-color: rgb(153, 116, 116);
+    } */
+    .skills {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    /* body {
+        background-color: lightgreen;
+    }  */
+    main div:first-child {
+        margin-left: 3%;
+    }
+    .about img {
+        width: 250px;
+    }
+    .skills-wrapper {
+        gap: 3%; /*ORIG 4%*/
+    }
+    .skills {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .cm1 {
+        order: 2;
+        margin: 0 auto;
+    }
+    .cm2 {
+        order: 1;
+        margin: 0 auto;
+    }
+    .cm-top {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 800px) { 
+    /* body {
+        background-color: blue;
+    } */
+    main div:first-child {
+        margin-left: 3%;
+    }
+    .intro-top {
+        width: 210px;
+        top: 68px;
+        left: 20%;
+    }
+    .intro-behind {
+        width: 249px;
+    }
+    .intro2ndarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about img {
+        width: 200px;
+    }
+    .skills {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .skills-wrapper {
+        gap: 10%; /*ORIG 4%*/
+    }
+}
+
+@media (max-width: 760px) { 
+    /* body {
+        background-color: yellow;
+    } */
+    .about div:last-child{
+        margin-right: 50px;
+    }
+    .skills {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .skills-wrapper {
+        justify-content: space-evenly;
+        gap: 12%; /*ORIG 4%*/
+    }
+    .skills .skills-container:nth-child(21) {
+        /* returning to default */
+        margin-top: 0px;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) { 
+    /* body {
+        background-color: lightblue;
+    } */
+    .about div:last-child{
+        margin-right: 20px;
+        padding-left: 20px;
+    }
+    .skills {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .skills-wrapper {
+        margin-top: 20px;
+        gap: 4%; /*ORIG 4%*/
+    }
+}
+
+@media (max-width: 480px) { 
+    /* body {
+        background-color: green;
+    } */
+    .skills {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .skills-wrapper {
+        justify-content: space-evenly;
+        margin-top: 20px;
+        gap: 8%; /*ORIG 4%*/
+    }
+}
+
+@media (max-width: 320px) { 
+    /* body {
+        background-color: lightyellow;
+    } */
+    .skills {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .skills-wrapper {
+        margin-top: 10px;
+        gap: 30px; /*ORIG 4%*/
+        justify-content: space-evenly;
+    }
+    .skills-container {
+        margin-bottom: 00px;
+    }
+}
+
 /*#endregion*/
